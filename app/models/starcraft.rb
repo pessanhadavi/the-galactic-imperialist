@@ -1,0 +1,2 @@
+class Starcraft < ApplicationRecord
+end
