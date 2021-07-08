@@ -12,5 +12,11 @@ module SwapiService
       response = open(url).read
       parsed_response = JSON.parse(response)
     end
+
+    def self.get_people(i)
+      url = "https://swapi.dev/api/people/#{i}"
+      response = open(url).read
+      parsed_response = JSON.parse(response)
+    end
   end
 end
