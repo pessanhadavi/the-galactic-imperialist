@@ -1,4 +1,3 @@
-require 'open-uri'
 module SwapiService
   class Load
     def self.get_data(i, entity)
