@@ -9,7 +9,7 @@ until Race.count == 37 do
   race = SwapiService::Load.get_data(i, "species")
 
   if race
-    Race.create(
+    Race.create!(
       kind: race['name']
     )
     printf("\rProgress: [%-37s]", "=" * (i))

@@ -36,6 +36,6 @@ def pilot_license_registration(starships_api, person)
     pilot = Pilot.new
     pilot.person = person
     pilot.starcraft = pilot_starcraft
-    pilot.save
+    pilot.save!
   end
 end

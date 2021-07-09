@@ -26,7 +26,7 @@ until Person.count == 82 do
     person.planet = person_planet
     person.race = person_race
     person.picture_url = person_picture
-    person.save
+    person.save!
 
     pilot_license_registration(person_api["starships"], person) if is_pilot?(person_api['starships'])
     printf("\rProgress: [%-41s]", "=" * (i/2))
