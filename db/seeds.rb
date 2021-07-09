@@ -21,7 +21,7 @@ def upload_planets
   i = 1
 
   until Planet.count == 60 do
-    planet = SwapiService::Load.get_planet(i)
+    planet = SwapiService::Load.get_data(i, "planets")
 
     if planet
       Planet.create!(
@@ -48,7 +48,7 @@ def upload_races
   i = 1
 
   until Race.count == 37 do
-    race = SwapiService::Load.get_species(i)
+    race = SwapiService::Load.get_data(i, "species")
 
     if race
       Race.create!(
@@ -77,7 +77,7 @@ def upload_starcrafts
   i = 1
 
   until Starcraft.count == 36 do
-    starcraft = SwapiService::Load.get_starcraft(i)
+    starcraft = SwapiService::Load.get_data(i, "starships")
     if starcraft
       Starcraft.create!(
         name: starcraft['name']
@@ -105,7 +105,7 @@ def upload_people_and_pilots
   i = 1
 
   until Person.count == 82 do
-    person_api = SwapiService::Load.get_person(i)
+    person_api = SwapiService::Load.get_data(i, "people")
     if person_api
       person_planet = find_planet(person_api)
       person_race = find_race(person_api)
@@ -137,7 +137,7 @@ end
 # Auxiliary methods for People and Pilots uploading
 def find_planet(person_api)
   planet_i = person_api['homeworld'][/(\d+)/]
-  planet = SwapiService::Load.get_planet(planet_i)
+  planet = SwapiService::Load.get_data(planet_i, "planets")
   Planet.find_by name: planet['name']
 end
 
@@ -147,7 +147,7 @@ def find_race(person_api)
     Race.first
   when 1
     race_i = person_api['species'].first[/(\d+)/]
-    race = SwapiService::Load.get_species(race_i)
+    race = SwapiService::Load.get_data(race_i, "species")
     Race.find_by kind: race['name']
   else
     race = person_api['species'].join('-')
@@ -164,7 +164,7 @@ end
 def pilot_license_registration(person_api, person)
   starcrafts = person_api["starships"].map do |starship|
     starcraft_i = starship[/(\d+)/]
-    SwapiService::Load.get_starcraft(starcraft_i)
+    SwapiService::Load.get_data(starcraft_i, "starships")
   end
 
   starcrafts.each do |starcraft|
