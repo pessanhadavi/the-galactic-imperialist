@@ -12,7 +12,7 @@ until Race.count == 37 do
     Race.create!(
       kind: race['name']
     )
-    printf("\rProgress: [%-36s]", "=" * (i))
+    printf("\rProgress: [%-37s]", "=" * (i))
   end
 
   i += 1
