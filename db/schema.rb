@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_07_204451) do
+ActiveRecord::Schema.define(version: 2021_07_09_164318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 2021_07_07_204451) do
     t.bigint "race_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "hair"
+    t.string "skin"
+    t.string "eye"
+    t.string "gender"
+    t.string "picture_url"
     t.index ["planet_id"], name: "index_people_on_planet_id"
     t.index ["race_id"], name: "index_people_on_race_id"
   end
