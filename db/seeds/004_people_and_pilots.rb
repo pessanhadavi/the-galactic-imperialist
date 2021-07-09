@@ -17,6 +17,10 @@ until Person.count == 82 do
       height: person_api['height'],
       weight: person_api['mass'],
       dob: person_api['birth_year']
+      hair: person_api['hair_color']
+      skin: person_api['skin_color']
+      eye: person_api['eye_color']
+      gender: person_api['gender']
     )
     person.planet = person_planet
     person.race = person_race
