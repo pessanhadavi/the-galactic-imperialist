@@ -11,7 +11,7 @@ until Planet.count == 60 do
   planet = SwapiService::Load.get_data(i, "planets")
 
   if planet
-    Planet.create!(
+    Planet.create(
       name: planet['name']
     )
     printf("\rProgress: [%-30s]", "=" * (i/2))

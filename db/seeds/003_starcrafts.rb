@@ -8,7 +8,7 @@ i = 1
 until Starcraft.count == 36 do
   starcraft = SwapiService::Load.get_data(i, "starships")
   if starcraft
-    Starcraft.create!(
+    Starcraft.create(
       name: starcraft['name']
     )
     printf("\rProgress: [%-37s]", "=" * (i/2))

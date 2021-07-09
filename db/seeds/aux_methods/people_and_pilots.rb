@@ -1,32 +1,32 @@
 # Auxiliary methods for People and Pilots uploading
-def find_planet(person_api)
-  planet_i = person_api['homeworld'][/(\d+)/]
+def find_planet(homeworld_api)
+  planet_i = homeworld_api[/(\d+)/]
   planet = SwapiService::Load.get_data(planet_i, "planets")
   Planet.find_by name: planet['name']
 end
 
-def find_race(person_api)
-  case person_api['species'].length
+def find_race(species_api)
+  case species_api.length
   when 0
     Race.first
   when 1
-    race_i = person_api['species'].first[/(\d+)/]
+    race_i = species_api.first[/(\d+)/]
     race = SwapiService::Load.get_data(race_i, "species")
     Race.find_by kind: race['name']
   else
-    race = person_api['species'].join('-')
+    race = species_api.join('-')
     Race.create!(
       kind: race
     )
   end
 end
 
-def is_pilot?(person_api)
-  person_api['starships'].length > 0
+def is_pilot?(starships_api)
+  starships_api.length > 0
 end
 
-def pilot_license_registration(person_api, person)
-  starcrafts = person_api["starships"].map do |starship|
+def pilot_license_registration(starships_api, person)
+  starcrafts = starships_api.map do |starship|
     starcraft_i = starship[/(\d+)/]
     SwapiService::Load.get_data(starcraft_i, "starships")
   end
