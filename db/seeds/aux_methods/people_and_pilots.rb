@@ -8,15 +8,19 @@ end
 def find_race(species_api)
   case species_api.length
   when 0
-    Race.first
+    Race.find_by kind: "Human"
   when 1
     race_i = species_api.first[/(\d+)/]
     race = SwapiService::Load.get_data(race_i, "species")
     Race.find_by kind: race['name']
   else
-    race = species_api.join('-')
+    race = species_api.map do |api_address|
+      race_i = api_address[/(\d+)/]
+      SwapiService::Load.get_data(race_i, "species")['name']
+    end
+
     Race.create!(
-      kind: race
+      kind: race.join('-')
     )
   end
 end
