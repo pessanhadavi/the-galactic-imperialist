@@ -4,7 +4,7 @@ RSpec.describe Person, :type => :model do
   planet = Planet.create name:"Anyone"
   race = Race.create kind:"Any"
 
-  subject { described_class.new(
+  subject { described_class.create(
       name: "Anything",
       height: "175",
       weight: "77",

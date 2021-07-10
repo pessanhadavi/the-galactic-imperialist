@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Starcraft, :type => :model do
-  subject { described_class.new name: "Anything" }
+  subject { described_class.create name: "Anything" }
 
   it "is valid with valid attributes" do
     expect(subject).to be_valid

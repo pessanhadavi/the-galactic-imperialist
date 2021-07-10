@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Race, :type => :model do
-  subject { described_class.new kind: "Any" }
+  subject { described_class.create kind: "Any" }
 
   it "is valid with valid attributes" do
     expect(subject).to be_valid
