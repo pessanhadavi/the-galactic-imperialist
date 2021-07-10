@@ -1,0 +1,11 @@
+terraqueo:
+  kind: Terráqueo
+
+human:
+  kind: Human
+
+droid:
+  kind: Droid
+
+droid_wookie:
+  kind: Droid-Wookie

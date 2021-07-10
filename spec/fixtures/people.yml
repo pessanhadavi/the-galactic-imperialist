@@ -1,0 +1,12 @@
+michael:
+  name: Michael Scott
+  height: 175
+  weight: 77
+  dob: Unknown
+  hair: Black
+  skin: Dark
+  eye: Blue
+  gender: Male
+  picture_url: http:/random.url.jpg
+  race: terraqueo
+  planet: terra
