@@ -10,11 +10,8 @@ Starcraft.destroy_all
 
 describe "Seeds/aux_methods: people_and_pilots" do
   fixtures :planets, :races, :starcrafts, :people
-  
-  binding.pry
-  
-  describe "#find_planet" do
 
+  describe "#find_planet" do
     it "returns the right planet instance" do
       tatooine = planets(:tatooine)
       planet_found = find_planet("https://swapi.dev/api/planets/1")
@@ -23,7 +20,6 @@ describe "Seeds/aux_methods: people_and_pilots" do
   end
 
   describe "#find_race" do
-
     it "returns the right race instances" do
       human = races(:human)
       droid = races(:droid)
