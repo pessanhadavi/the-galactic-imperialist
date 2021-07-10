@@ -1,70 +1,61 @@
 require 'rails_helper'
 
 RSpec.describe Person, :type => :model do
-  planet = Planet.create name:"Anyone"
-  race = Race.create kind:"Any"
+  fixtures :planets, :races, :people
 
-  subject { described_class.create(
-      name: "Anything",
-      height: "175",
-      weight: "77",
-      dob: "Unknown",
-      hair: "Black",
-      skin: "Dark",
-      eye: "Blue",
-      gender: "Male",
-      picture_url: "http:/random.url.jpg",
-      planet_id: planet.id,
-      race_id: race.id
-    )
-  }
+  before(:each) do
+    @person = people(:michael)
+  end
 
   it "is valid with valid attributes" do
-    expect(subject).to be_valid
+    expect(@person).to be_valid
   end
 
   it "is not valid without a name" do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
-
-  it "is not valid without a name" do
-    subject.name = nil
-    expect(subject).to_not be_valid
+    @person.name = nil
+    @person.save
+    expect(@person).to_not be_valid
   end
 
   it "is not valid without a height" do
-    subject.height = nil
-    expect(subject).to_not be_valid
+    @person.height = nil
+    @person.save
+    expect(@person).to_not be_valid
   end
 
   it "is not valid without a weight" do
-    subject.weight = nil
-    expect(subject).to_not be_valid
+    @person.weight = nil
+    @person.save
+    expect(@person).to_not be_valid
   end
 
   it "is not valid without a dob" do
-    subject.dob = nil
-    expect(subject).to_not be_valid
+    @person.dob = nil
+    @person.save
+    expect(@person).to_not be_valid
   end
 
   it "is not valid without a hair color" do
-    subject.hair = nil
-    expect(subject).to_not be_valid
+    @person.hair = nil
+    @person.save
+    expect(@person).to_not be_valid
   end
 
   it "is not valid without a skin tone" do
-    subject.skin = nil
-    expect(subject).to_not be_valid
+    @person.skin = nil
+    @person.save
+    expect(@person).to_not be_valid
   end
 
   it "is not valid without an eye color" do
-    subject.eye = nil
-    expect(subject).to_not be_valid
+    @person.eye = nil
+    @person.save
+    expect(@person).to_not be_valid
   end
 
   it "is not valid without a gender" do
-    subject.gender = nil
-    expect(subject).to_not be_valid
+    @person.gender = nil
+    @person.save
+    expect(@person).to_not be_valid
   end
 end
