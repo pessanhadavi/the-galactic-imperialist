@@ -1,6 +1,13 @@
 require 'rails_helper'
 require_relative '../../db/seeds/aux_methods/people_and_pilots.rb'
 
+# reset_database
+Pilot.destroy_all
+Person.destroy_all
+Planet.destroy_all
+Race.destroy_all
+Starcraft.destroy_all
+
 describe "Seeds/aux_methods: people_and_pilots" do
   fixtures :planets, :races, :starcrafts, :people
   
