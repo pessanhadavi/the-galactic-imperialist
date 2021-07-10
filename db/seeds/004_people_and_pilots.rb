@@ -1,4 +1,8 @@
 require_relative 'aux_methods/people_and_pilots.rb'
+
+# Jar Jar Binks picture url
+JJ_PIC = "https://upload.wikimedia.org/wikipedia/commons/f/f7/Star_Wars_Celebration_II_-_me_with_an_unemployed_Jar_Jar_%284878852516%29.jpg"
+
 # Uploading People and Pilots
 system "clear"
 puts "Uploading people information to the database..."
@@ -11,7 +15,7 @@ until Person.count == 82 do
   if person_api
     person_planet = find_planet(person_api['homeworld'])
     person_race = find_race(person_api['species'])
-    person_picture = AkababService::Load.get_data(i)
+    person_picture = person_api['name'] == "Jar Jar Binks" ? JJ_PIC : AkababService::Load.get_data(i)
 
     person = Person.new(
       name: person_api['name'],
