@@ -1,14 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe Planet, :type => :model do
-  subject { described_class.create name: "Anything" }
+  fixtures :planets
 
-  it "is valid with valid attributes" do
-    expect(subject).to be_valid
+  before(:each) do
+    @planet = planets(:terra)
   end
 
-  it "is not valid without a name" do
-    subject.name = nil
-    expect(subject).to_not be_valid
+  it "is valid with valid attributes" do
+    expect(@planet).to be_valid
+  end
+
+  it "is not valid with no name" do
+    @planet.name = nil
+    expect(@planet).to_not be_valid
   end
 end
