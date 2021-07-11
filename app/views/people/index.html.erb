@@ -1,9 +1,15 @@
-<div class="list-wrapper">
-  <ul>
-    <% @people.each do |person| %>
-      <li>
-        <%= person.name %>
-      </li>
-    <% end %>
-  </ul>
+<div class="container">
+  <div class="row">
+    <div class="col-3 list-fixed py-4">
+      <div class="list-wrapper">
+        <ul>
+          <% @people.each do |person| %>
+            <li>
+              <%= person.name %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

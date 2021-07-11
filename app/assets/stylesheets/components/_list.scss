@@ -11,6 +11,12 @@ li {
   color: white;
 }
 
+.list-fixed{
+  height: 450px;
+}
+
 .list-wrapper {
-  padding: 60px;
+  height:440px;
+  width: 300px;
+  overflow:auto;
 }
