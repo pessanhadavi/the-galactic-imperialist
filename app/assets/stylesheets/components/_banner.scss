@@ -1,11 +1,17 @@
-h1 {
+.banner {
+  padding: 10px 25px;
+  text-align: center;
+}
+.banner h1 {
   font-family: "Star Jedi";
   // src: url("//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.eot");
   // src: url("//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.woff") format("woff"), url("//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.svg#Star Jedi") format("svg");
-  font-size: 80px;
+  font-size: 60px;
   color: yellow;
+  margin: 0;
+  line-height: 1;
 }
 
-h1 span {
+.banner h1 span {
   color: white;
 }
