@@ -9,12 +9,10 @@ li {
   font-size: 13px;
   color: white;
   background-color: #0D0D0D;
-}
-
-li:hover {
-  color: #0D0D0D;
-  background-color: white;
-  text-decoration: none;
+  &:hover {
+    color: #0D0D0D;
+    background-color: white;
+  }
 }
 
 .list-fixed{
@@ -31,4 +29,14 @@ li:hover {
   color:yellow;
   font-size: 20px;
   padding-bottom: 10px;
+}
+
+/* List responsiveness */
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .list-wrapper {
+    height:30vh;
+    width: 100%;
+  }
 }

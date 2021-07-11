@@ -15,3 +15,10 @@
 .banner h1 span {
   color: white;
 }
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .banner h1 {
+    font-size: 40px;
+  }
+}
