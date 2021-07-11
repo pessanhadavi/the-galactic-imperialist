@@ -8,6 +8,13 @@ li {
   font-family: 'Press Start 2P', cursive;
   font-size: 13px;
   color: white;
+  background-color: #0D0D0D;
+}
+
+li:hover {
+  color: #0D0D0D;
+  background-color: white;
+  text-decoration: none;
 }
 
 .list-fixed{

@@ -5,9 +5,11 @@
       <div class="list-wrapper">
         <ul>
           <% @people.each do |person| %>
-            <li>
-              <%= person.name %>
-            </li>
+            <%= link_to do %>
+              <li>
+                <%= person.name %>
+              </li>
+            <% end %>
           <% end %>
         </ul>
       </div>
