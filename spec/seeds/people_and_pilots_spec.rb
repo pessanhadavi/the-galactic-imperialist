@@ -13,24 +13,20 @@ describe "Seeds/aux_methods: people_and_pilots" do
 
   describe "#find_planet" do
     it "returns the right planet instance" do
-      tatooine = planets(:tatooine)
       planet_found = find_planet("https://swapi.dev/api/planets/1")
-      expect(planet_found.name).to eq(tatooine.name)
+      expect(planet_found.name).to eq("Tatooine")
     end
   end
 
   describe "#find_race" do
     it "returns the right race instances" do
-      human = races(:human)
-      droid = races(:droid)
-      droid_wookie = races(:droid_wookie)
-      human_found = find_race([])
-      droid_found = find_race(["https://swapi.dev/api/species/2/"])
-      droid_w_found = find_race(["https://swapi.dev/api/species/2/", "https://swapi.dev/api/species/3/"])
+      human = find_race([])
+      droid = find_race(["https://swapi.dev/api/species/2/"])
+      droid_w = find_race(["https://swapi.dev/api/species/2/", "https://swapi.dev/api/species/3/"])
 
-      expect(human_found.kind).to eq(human.kind)
-      expect(droid_found.kind).to eq(droid.kind)
-      expect(droid_w_found.kind).to eq(droid_wookie.kind)
+      expect(human.kind).to eq("Human")
+      expect(droid.kind).to eq("Droid")
+      expect(droid_w.kind).to eq("Droid-Wookie")
     end
   end
 
