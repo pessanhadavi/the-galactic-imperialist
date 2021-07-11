@@ -11,17 +11,3 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
-// Page configuration
-
-body { 
-  background: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg') no-repeat center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-h1, h2, h3 {
-  font-family: "Star Jedi";
-}
