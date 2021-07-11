@@ -12,11 +12,16 @@ li {
 }
 
 .list-fixed{
-  height: 450px;
+  height: 70vh;
 }
 
 .list-wrapper {
-  height:440px;
+  height:60vh;
   width: 300px;
   overflow:auto;
+}
+
+.list-fixed h3{
+  color:yellow;
+  font-size: 20px;
 }
