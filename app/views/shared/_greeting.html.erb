@@ -1,7 +1,7 @@
 <% if person.starcrafts.length > 0 %>
   <% starships = person.starcrafts.map { |starcraft| starcraft.name } %>
   <p><%= render "shared/common_sentence", person: person %> And I've already piloted:</p>
-  <p><%= starships.join(', ') %>.</p>
+  <p><%= starships.join(', ').reverse.sub(',', ' and'.reverse).reverse %>.</p>
 <% else %>
   <p>
     <%= render "shared/common_sentence", person: person %>
