@@ -1,2 +1,2 @@
 var person_div = document.querySelector("#show-person");
-document.querySelector("#show-person").innerHTML="<%= j render partial: 'shared/show_person', locals: { person_found: @person } %>";
+document.querySelector("#show-person").innerHTML="<%= j render partial: 'shared/show_person', locals: { person: @person } %>";
