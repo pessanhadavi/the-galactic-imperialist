@@ -2,16 +2,16 @@
   <div class="col-sm-12 col-lg-4 py-4 ml-lg-5 ml-sm-0 content-avatar">
     <%= image_tag person.picture_url %>
   </div>
-  <div class="col-sm-12 col-lg-7 py-4 content-box">
-    <div class="content-header">
-      <h2><%= person.name.downcase %></h2>
-    </div>
-    <div class="content-text">
-      <div class="row">
-        <div class="col-12">
+  <div class="col-sm-12 col-lg-7 my-4 content-box d-flex flex-column justify-content-between">
+    <div class="row">
+      <div class="col-12">
+        <div class="content-header">
+          <h2><%= person.name.downcase %></h2><br>
           <%= render "shared/greeting", person: person %>
         </div>
       </div>
+    </div>
+    <div class="content-text">
       <div class="row">
         <div class="col-6">
           <h3>Homeworld:</h3>

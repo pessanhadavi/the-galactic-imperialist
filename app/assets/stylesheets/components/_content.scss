@@ -14,26 +14,27 @@
   background-color: #0D0D0D;
 }
 
-.content-box {
+.content-box p {
   background-color: #0D0D0D;
-  height: 100%;
-}
-
-.content-header h2{
-  color:yellow;
-}
-
-.content-text {
-  height: 100%;
-}
-
-.content-text h3 {
-  font-size: 15px;
-  color: yellow;
-}
-
-.content-text p {
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
   color: white;
+}
+
+.content-box h2 {
+  margin:0;
+}
+
+.content-box h3 {
+  font-size: 15px;
+}
+
+.content-header {
+  background-color: #0D0D0D;
+  padding: 0 8px;
+}
+
+.content-text {
+  background-color: #0D0D0D;
+  padding: 0 8px;
 }
