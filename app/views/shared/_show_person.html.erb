@@ -1,5 +1,26 @@
 <div class="row">
-  <div class="col-sm-12 col-lg-3 list-fixed py-4 ml-5">
-    <%= image_tag person.picture_url, height: "100%" %>
+  <div class="col-sm-12 col-lg-4 py-4 ml-lg-5 ml-sm-0 content-avatar">
+    <%= image_tag person.picture_url %>
+  </div>
+  <div class="col-sm-12 col-lg-7 py-4 content-box">
+    <div class="content-header">
+      <h2><%= person.name.downcase %></h2>
+    </div>
+    <div class="content-text">
+      <div class="row">
+        <div class="col-6">
+          <h3><span>Homeworld:</h3>
+          <p><%= person.planet.name %></p>
+          <h3>Skin:</h3>
+          <p><%= person.skin.capitalize %></span></p>
+        </div>
+        <div class="col-6">
+          <h3><span>Homeworld:</h3>
+          <p><%= person.planet.name %></p>
+          <h3>Skin:</h3>
+          <p><%= person.skin.capitalize %></span></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
