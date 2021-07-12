@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row content-wrapper">
   <div class="col-sm-12 col-lg-4 py-4 ml-lg-5 ml-sm-0 content-avatar">
     <%= image_tag person.picture_url %>
   </div>
@@ -8,17 +8,32 @@
     </div>
     <div class="content-text">
       <div class="row">
+        <div class="col-12">
+          <%= render "shared/greeting", person: person %>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-6">
-          <h3><span>Homeworld:</h3>
+          <h3>Homeworld:</h3>
           <p><%= person.planet.name %></p>
-          <h3>Skin:</h3>
-          <p><%= person.skin.capitalize %></span></p>
+          <h3>Species:</h3>
+          <p><%= person.race.kind %></p>
+          <h3>Weight (Kg):</h3>
+          <p><%= person.weight %></p>
+          <h3>Hair:</h3>
+          <p><%= person.hair %></p>
+          <h3>Gender:</h3>
+          <p><%= person.gender %></p>
         </div>
         <div class="col-6">
-          <h3><span>Homeworld:</h3>
-          <p><%= person.planet.name %></p>
-          <h3>Skin:</h3>
-          <p><%= person.skin.capitalize %></span></p>
+          <h3>Birth Year:</h3>
+          <p><%= person.dob %></p>
+          <h3>Gender:</h3>
+          <p><%= person.gender %></p>
+          <h3>Height (cm):</h3>
+          <p><%= person.height %></p>
+          <h3>Eye:</h3>
+          <p><%= person.eye %></p>
         </div>
       </div>
     </div>

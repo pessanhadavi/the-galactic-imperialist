@@ -1,5 +1,9 @@
-.content-avatar {
+.content-wrapper {
   height: 70vh;
+}
+
+.content-avatar {
+  height: 100%;
 }
 
 .content-avatar img {
@@ -12,15 +16,22 @@
 
 .content-box {
   background-color: #0D0D0D;
+  height: 100%;
 }
+
 .content-header h2{
   color:yellow;
+}
+
+.content-text {
+  height: 100%;
 }
 
 .content-text h3 {
   font-size: 15px;
   color: yellow;
 }
+
 .content-text p {
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
