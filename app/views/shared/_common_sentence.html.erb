@@ -1,2 +1,3 @@
-My name is <%= person.name %>, I'm a <%= person.race.kind %> from
-<%= person.planet.name %>.
+My name is <%= person.name %>, 
+I'm a <%= link_to person.race.kind, "https://starwars.fandom.com/wiki/#{person.race.kind}", target: "_blank" %> 
+from <%= link_to person.planet.name, "https://starwars.fandom.com/wiki/#{person.planet.name}", target: "_blank" %>.
