@@ -1,12 +1,11 @@
 // Page general configuration
 
 body { 
-  background: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg') no-repeat center fixed; 
+  background: url('star-bg.jpg') no-repeat center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // overflow: hidden;
 }
 
 h1, h2, h3 {
