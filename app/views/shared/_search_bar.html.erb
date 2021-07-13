@@ -5,9 +5,10 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control search-input",
-        placeholder: "Find a character"
+        placeholder: "Find a character",
+        id:"search-inp"
       %>
-      <%= button_tag '<i class="fas fa-search search-icon"></i>'.html_safe, type: 'submit', class: "search-button" %>
+      <%= button_tag '<i class="fas fa-search search-icon"></i>'.html_safe, type: 'submit', class: "search-button", id:"search-btn" %>
     </div>
   <% end %>
 </div>
