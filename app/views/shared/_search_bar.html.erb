@@ -1,6 +1,7 @@
 <div class="search-bar">
   <%= form_tag root_path, method: :get do %>
     <div class="d-flex">
+      <%= link_to '<i class="fas fa-undo search-icon"></i>'.html_safe, root_path, class: "back-button" %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control search-input",

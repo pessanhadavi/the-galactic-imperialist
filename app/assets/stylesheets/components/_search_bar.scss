@@ -1,6 +1,7 @@
 .search-bar {
   padding-bottom: 10px;
 }
+
 .search-button {
   color: white;
   width: 40px;
@@ -27,4 +28,14 @@
 
 .search-icon {
   color:black;
+}
+
+.back-button {
+  color: white;
+  padding-left: 6px;
+  padding-top: 4px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+
 }
