@@ -1,6 +1,10 @@
 class PeopleController < ApplicationController
   def index
-    @people = Person.all
+    if params[:query].present?
+      @people = Person.where("people.name @@ :query", query: "%#{params[:query]}%")
+    else
+      @people = Person.all
+    end
   end
 
   def show
