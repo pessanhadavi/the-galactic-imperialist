@@ -33,8 +33,21 @@ li {
 
 /* List responsivity */
 
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
+@media (max-width: 900px) {
+  /* For a screen < 900px, this CSS will be read */
+  .list-wrapper {
+    height:30vh;
+    width: 100vh;
+  }
+
+  .list-fixed{
+    height: 30vh;
+    z-index: 1000;
+  }
+}
+
+@media (max-width: 700px) {
+  /* For a screen < 700px, this CSS will be read */
   .list-wrapper {
     height:30vh;
     width: 100%;
