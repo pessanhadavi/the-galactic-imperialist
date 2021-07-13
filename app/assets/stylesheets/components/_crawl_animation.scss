@@ -116,7 +116,7 @@
 
 /* Animation responsivity */
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
   /* For a screen < 540px, this CSS will be read */
   #intro {
     animation: intro 40s ease-out infinite;
@@ -129,5 +129,10 @@
 
   #scroller div {
     animation: scroller 0s linear infinite;
+  }
+
+  #scroller {
+    transform: none;
+    color:transparent;
   }
 }

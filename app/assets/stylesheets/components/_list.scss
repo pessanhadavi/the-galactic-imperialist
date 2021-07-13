@@ -39,4 +39,9 @@ li {
     height:30vh;
     width: 100%;
   }
+
+  .list-fixed{
+    height: 50vh;
+    z-index: 1000;
+  }
 }
