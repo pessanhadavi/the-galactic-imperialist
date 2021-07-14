@@ -49,3 +49,11 @@
   background-color: #0f0f0f8e;
   padding: 0 8px;
 }
+
+@media (max-width: 700px) {
+  /* For a screen < 700px, this CSS will be read */
+  .content-avatar {
+    height: 70%;
+  }
+
+}

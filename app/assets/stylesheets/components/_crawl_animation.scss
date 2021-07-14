@@ -117,7 +117,7 @@
 /* Animation responsivity */
 
 @media (max-width: 700px) {
-  /* For a screen < 600px, this CSS will be read */
+  /* For a screen < 700px, this CSS will be read */
   #intro {
     animation: intro 40s ease-out infinite;
     font-size: 100%;
