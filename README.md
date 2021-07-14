@@ -11,7 +11,7 @@ This is a project the use connections to API's to populate the database and disp
 rbenv install 2.6.6
 rbenv global 2.6.6
 ```
-4) Install Rails 6.0.3.7 (never do sudo gem install rails even if the terminal tells you so)
+4) Install Rails 6.0.3.7
 ```
 gem install rails -v 6.0
 ```
