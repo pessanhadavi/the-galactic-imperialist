@@ -4,33 +4,30 @@ This is a project that uses connections to APIs ([SWAPI](https://swapi.dev/) and
 ## Getting started
 1) If you want to fork/clone the project, make sure you have [PostgreSQL](https://www.postgresql.org/) installed in your machine
 
-2) Use rbenv to install the right Ruby version. You can find info about rbenv [here](https://github.com/rbenv/rbenv)
-
-3) You'll also need to have Ruby installed in your machine and running the 2.6.6 version by default
+2) You'll also need to have Ruby installed in your machine
 ```
 rbenv install 2.6.6
 rbenv global 2.6.6
 ```
-4) Install Rails 6.0.3.7
+3) Install Rails 6.0.3.7
 ```
 gem install rails -v 6.0
 ```
-5) If you don't have bundler installed, you need to install it:
+4) If you don't have bundler installed, you need to install it:
 ```
 gem install bundler
-npm install --global yarn
 ```
-6) After that, run bundle to install the gems
+5) After that, run bundle on the terminal to install the gems
 
-7) At last, you need to create and migrate the development database
+6) At last, you need to create and migrate the development database
 ```
 rails db:create db:migrate
 ```
-8) Don't forget to seed the database, so it gets populated by the Star Wars information
+7) Don't forget to seed the database, so it gets populated by the Star Wars information
 ```
 rails db:seed
 ```
-9) You can finally check the web application
+8) You can finally check the web application
 ```
 rails s
 http://localhost:3000/
