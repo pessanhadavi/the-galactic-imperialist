@@ -19,7 +19,7 @@ gem install bundler
 ```
 5) After that, run bundle on the terminal to install the gems
 
-6) At last, you need to create and migrate the development database
+6) You also need to create and migrate the development database
 ```
 rails db:create db:migrate
 ```
