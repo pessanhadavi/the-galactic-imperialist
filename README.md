@@ -1,5 +1,5 @@
 # The Galactic Imperialist
-This is a project the use connections to API's to populate the database and display Star Wars characters on a clickable list. You can also read details about the characters.
+This is a project the use connections to APIs ([SWAPI](https://swapi.dev/) and [Akabab-StarWars](https://github.com/akabab/starwars-api)) to populate the database and display Star Wars characters on a clickable list. You can also read details about the characters.
 
 ## Getting started
 1) If you want to fork/clone the project, make sure you have [PostgreSQL](https://www.postgresql.org/) installed in your machine
