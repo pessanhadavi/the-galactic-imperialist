@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
     if params[:query].present?
       @people = Person.where("people.name @@ :query", query: "%#{params[:query]}%")
     else
-      @people = Person.all
+      @people = Person.all.order(:name)
     end
   end
 
